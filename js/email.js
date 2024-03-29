@@ -30,10 +30,13 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 
     emailjs.send('service_1ye5xn6', 'template_7121uuw', templateParams).then(
       (response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        alert("the message sent successfully")
+        location.reload();
+        // console.log('SUCCESS!', response.status, response.text);
       },
       (error) => {
-        console.log('FAILED...', error);
+        alert('FAILED...', error)
+        location.reload();
       },
     );
     // Log the form data to the console
